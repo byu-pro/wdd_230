@@ -1,0 +1,66 @@
+/* Apply CSS normalization or equivalent here if necessary */
+
+/* Define your color scheme and typography choices */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns by default */
+    gap: 20px;
+    padding: 20px;
+}
+
+.design-card {
+    background-color: white;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Apply media queries for responsive design */
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        grid-template-columns: repeat(1, 1fr); /* One column for small screens */
+    }
+}
+/* Add this CSS code to your base.css file or within a <style> element in your HTML file's <head> section */
+
+/* Style the h2 element with a bold background */
+h2 {
+    background-color: #04182e; /* Replace with your desired background color */
+    color: #fff; /* Text color on the background */
+    padding: 10px; /* Add padding to create spacing between text and background */
+    font-weight: bold; /* Make the text bold */
+    /* Add any other styles you want for the h2 element */
+}
