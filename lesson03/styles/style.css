@@ -21,11 +21,13 @@ Fonts are separated by a & */
   --paragraph-color-on-white: #396E94; /* paragraph text on a white background */
   --paragraph-color-on-color: white; /* paragraph text on a colored background */
   --paragraph-background-color: #396E94;
-  --nav-link-color: #396E94;
-  --nav-background-color: #D4AC0D;
+  --nav-link-color: #FFB703;
+  --nav-background-color: #023047;
   --nav-hover-link-color: white;
   --nav-hover-background-color: #396E94;
 }
+
+
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
@@ -113,10 +115,10 @@ p.colored {
 }
 
 nav {
-  background-color: var(--nav-background-color);
-  line-height: 3em;
-  text-align: center;
-  font-size: 1.2em;
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    text-align: center; /* Center-align the text */
+    font-size: 1.2em;
 }
 
 nav  {
@@ -125,10 +127,11 @@ nav  {
 }
 
 nav a {
-  padding: 1em;
-  min-width: 120px;
-  text-decoration: none;
-  padding: 10px;
+    padding: 1em;
+    min-width: 120px;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block; /* Add this property to center-align each navigation link */
 }
 
 nav a:link, nav a:visited {
@@ -190,3 +193,10 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    text-align: center; /* Add this line to center-align the text */
+    font-size: 1.2em;
+  }
+  
