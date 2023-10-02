@@ -1,7 +1,13 @@
+// Get references to the elements
 const hamburgerIcon = document.getElementById('hamburger-icon');
 const mainMenu = document.getElementById('main-menu');
 
+// Add a click event listener to the hamburger icon
 hamburgerIcon.addEventListener('click', () => {
-    console.log('Hamburger icon clicked'); // Debugging statement
+    // Toggle the 'show-menu' class to show/hide the menu
     mainMenu.classList.toggle('show-menu');
+    
+    // You can add additional code here to handle menu behavior
+    // For example, you can close the menu when a menu item is clicked
+    // or perform other actions based on user interactions.
 });

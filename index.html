@@ -11,14 +11,150 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="favicon.ico">
    
-    <!-- Add this button for the hamburger menu -->
-    <button id="hamburger-icon">&#8801;</button>
-
     <!-- Add Open Graph meta properties -->
     <meta property="og:title" content="[Your Page Title]">
     <meta property="og:type" content="website">
     <meta property="og:image" content="[Absolute Image URL]">
     <meta property="og:url" content="[Canonical URL]">
+    
+    <!-- Custom CSS Styles -->
+    <style>
+        /* Your custom styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #002e5d;
+            /* Keep other properties the same */
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            background-color: #000000;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px !important;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #002e5d;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Initial styles to hide the menu */
+        nav ul {
+            display: none;
+        }
+
+        /* Styles for the hamburger icon */
+        #hamburger-icon {
+            display: none; /* Hide the icon by default on larger screens */
+            cursor: pointer;
+            font-size: 20px; /* Adjust the size as needed */
+            position: absolute;
+            top: 10px;
+            right: 20px; /* Adjust the right distance as needed */
+        }
+
+        /* Show the hamburger icon only on smaller screens */
+        @media (max-width: 768px) {
+            #hamburger-icon {
+                display: block;
+            }
+        }
+
+        /* Styles for the navigation menu - initially visible on larger screens */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Show the menu on larger screens */
+        @media (min-width: 769px) {
+            nav ul {
+                display: block; /* Display the menu on larger screens */
+            }
+
+            /* Hide the hamburger icon on larger screens */
+            #hamburger-icon {
+                display: none;
+            }
+        }
+
+        /* Styles for the header content */
+        #header-content {
+            position: relative;
+        }
+
+        /* Styles for the hamburger icon */
+        #hamburger-icon {
+            cursor: pointer;
+            font-size: 20px; /* Adjust the size as needed */
+            position: absolute;
+            top: 40px;
+            right: 20px; /* Adjust the right distance as needed */
+        }
+
+        /* Add pseudo-elements to the navigation menu items */
+        nav ul li::before {
+            content: '➜'; /* You can change the content to any symbol or text you prefer */
+            margin-right: 5px; /* Adjust spacing between the content and menu item text */
+            color: #007bff; /* Adjust the color of the pseudo-element */
+        }
+
+        nav ul li.current-page a {
+            color: yellow;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -34,7 +170,6 @@
             <li><a href="chamber/">Chamber</a></li>
             <li><a href="https://www.byui.edu" target="_blank">BYU-Idaho</a></li>
             <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
-
         </ul>
     </nav>
     <main>
@@ -69,7 +204,7 @@
         <p id="lastModified">Last Modified: Tue, Sep 26</p>
     </footer>
 
-    </style>
+    <!-- JavaScript for the hamburger menu -->
     <script>
         // Get references to the elements
         const hamburgerIcon = document.getElementById('hamburger-icon');
@@ -98,6 +233,5 @@
         // Add a resize event listener to handle screen size changes
         window.addEventListener('resize', hideMenuOnLargeScreen);
     </script>
-    
 </body>
 </html>

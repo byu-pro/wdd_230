@@ -1,4 +1,4 @@
-/* Customize your styles here */
+/* Base Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
@@ -10,9 +10,6 @@ header {
     text-align: center;
     padding: 20px;
     background-color: #002e5d;
-    /* Keep other properties the same */
-    text-align: center;
-    padding: 20px;
 }
 
 header h1 {
@@ -35,7 +32,6 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin-right: 20px !important;
-    
 }
 
 nav ul li:last-child {
@@ -69,116 +65,56 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-/* Initial styles to hide the menu */
-nav ul {
-    display: none;
-}
 
-/* Styles for the hamburger icon */
-#hamburger-icon {
-    display: none; /* Hide the icon by default on larger screens */
-    cursor: pointer;
-    font-size: 20px; /* Adjust the size as needed */
-}
-
-/* Show the menu when the icon is clicked */
-#hamburger-icon.active + nav ul {
-    display: block;
-}
-/* Show the hamburger icon only on smaller screens */
-@media (max-width: 768px) {
-    #hamburger-icon {
-        display: block;
-    }
-}
-/* Styles for the hamburger icon */
+/* Hamburger Icon Styles */
 #hamburger-icon {
     cursor: pointer;
-    font-size: 20px; /* Adjust the size as needed */
+    font-size: 20px;
     position: absolute;
     top: 10px;
-    right: 20px; /* Adjust the right distance as needed */
-}
-/* Styles for the hamburger icon - initially hidden on larger screens */
-#hamburger-icon {
-    display: none; /* Hide the icon by default on larger screens */
-    cursor: pointer;
-    font-size: 20px; /* Adjust the size as needed */
-    position: absolute;
-    top: 10px;
-    right: 20px; /* Adjust the right distance as needed */
+    right: 20px;
+    display: none; /* Initially hide the icon on larger screens */
 }
 
-/* Show the hamburger icon only on screens with a width less than 768px */
 @media (max-width: 768px) {
     #hamburger-icon {
-        display: block;
+        display: block; /* Show the icon on smaller screens */
     }
 }
 
-/* Styles for the navigation menu - initially visible on larger screens */
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Show the menu on larger screens */
-@media (min-width: 769px) {
-    nav ul {
-        display: block; /* Display the menu on larger screens */
-    }
-
-    /* Hide the hamburger icon on larger screens */
-    #hamburger-icon {
-        display: none;
-    }
-}
-/* Styles for the navigation menu - initially visible on larger screens */
+/* Navigation Menu Styles */
 nav {
-    background-color: #000; /* Set your desired background color here */
+    background-color: #000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Add margin to separate the background from the ul */
+    margin: 0;
 }
 
-/* Add more padding to the menu items on larger screens */
 nav ul li {
-    padding: 10px 20px; /* Adjust the padding as needed */
+    padding: 10px 20px;
 }
 
-/* Show the menu on larger screens */
 @media (min-width: 769px) {
     nav ul {
-        display: block; /* Display the menu on larger screens */
+        display: block;
     }
 
-    /* Hide the hamburger icon on larger screens */
     #hamburger-icon {
         display: none;
     }
 }
-/* Styles for the header content */
-#header-content {
-    position: relative;
+
+/* Pseudo-elements for Navigation Menu Items */
+nav ul li::before {
+    content: '➜';
+    margin-right: 5px;
+    color: #007bff;
 }
 
-/* Styles for the hamburger icon */
-#hamburger-icon {
-    cursor: pointer;
-    font-size: 20px; /* Adjust the size as needed */
-    position: absolute;
-    top: 40px;
-    right: 20px; /* Adjust the right distance as needed */
-}
-/* Add pseudo-elements to the navigation menu items */
-nav ul li::before {
-    content: '➜'; /* You can change the content to any symbol or text you prefer */
-    margin-right: 5px; /* Adjust spacing between the content and menu item text */
-    color: #007bff; /* Adjust the color of the pseudo-element */
-}
+/* Current Page Style */
 nav ul li.current-page a {
     color: yellow;
 }
