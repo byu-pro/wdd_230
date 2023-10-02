@@ -205,3 +205,12 @@ h3 {
     text-align: center; /* Add this line to center-align the text */
     font-size: 1.2em;
 }
+nav {
+    background-color: var(--nav-background-color);
+    display: flex; /* Add this line to use Flexbox */
+    justify-content: center; /* Center-align the items horizontally */
+    align-items: center; /* Center-align the items vertically */
+    height: 3em; /* Set a specific height for the navigation bar */
+    font-size: 1.2em;
+  }
+  
