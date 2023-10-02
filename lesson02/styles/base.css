@@ -64,3 +64,51 @@ h2 {
     font-weight: bold; /* Make the text bold */
     /* Add any other styles you want for the h2 element */
 }
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none; /* Initially hide on larger screens */
+}
+
+.hamburger-icon {
+    cursor: pointer;
+}
+
+.main-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.main-menu li {
+    margin: 10px 0;
+}
+
+/* Show the menu on smaller screens */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .main-menu {
+        display: none;
+        background-color: #333;
+        padding: 10px;
+        position: absolute;
+        top: 50px; /* Adjust as needed */
+        right: 0;
+        width: 200px;
+    }
+
+    .main-menu.show-menu {
+        display: block;
+    }
+
+    /* Styles for 'X' symbol to close the menu */
+    #hamburger-icon.show-menu::after {
+        content: '✕'; /* Unicode for 'X' symbol */
+    }
+}
+/* Pseudo-element for wayfinding notation */
+.main-menu li::before {
+    content: '➜'; /* Unicode for right arrow */
+    margin-right: 5px;
+}
