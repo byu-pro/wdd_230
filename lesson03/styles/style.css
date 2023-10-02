@@ -199,4 +199,9 @@ nav {
     text-align: center; /* Add this line to center-align the text */
     font-size: 1.2em;
   }
-  
+h3 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+    text-align: center; /* Add this line to center-align the text */
+    font-size: 1.2em;
+}
