@@ -1,0 +1,68 @@
+/* Reset some default styles for better consistency across browsers */
+body, h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define your color scheme */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #f7f7f7; /* Light gray background */
+    color: #333333; /* Dark gray text color */
+}
+
+header {
+    background-color: #007BFF;
+    padding: 20px 0;
+    text-align: center;
+    color: white; /* White header text color */
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Add space below the header text */
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly raised sections */
+}
+
+h2 {
+    font-family: 'Lato', Arial, sans-serif;
+    color: #007BFF; /* Blue heading color */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555555; /* Slightly darker gray text color */
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Style for links */
+a {
+    text-decoration: none;
+    color: #007BFF; /* Blue link color */
+    transition: color 0.3s ease; /* Smooth link color transition */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Add button styles here if needed */
+
+footer {
+    background-color: #007BFF;
+    padding: 10px 0;
+    text-align: center;
+    color: white; /* White footer text color */
+}
