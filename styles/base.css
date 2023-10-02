@@ -9,6 +9,14 @@ body {
 header {
     text-align: center;
     padding: 20px;
+    background-color: #002e5d;
+    /* Keep other properties the same */
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: white;
 }
 
 header img {
@@ -19,14 +27,15 @@ header img {
 
 nav ul {
     list-style-type: none;
-    background-color: #333;
+    background-color: #000000;
     padding: 10px 0;
     text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    margin-right: 20px !important;
+    
 }
 
 nav ul li:last-child {
@@ -55,8 +64,121 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #002e5d;
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+/* Initial styles to hide the menu */
+nav ul {
+    display: none;
+}
+
+/* Styles for the hamburger icon */
+#hamburger-icon {
+    display: none; /* Hide the icon by default on larger screens */
+    cursor: pointer;
+    font-size: 20px; /* Adjust the size as needed */
+}
+
+/* Show the menu when the icon is clicked */
+#hamburger-icon.active + nav ul {
+    display: block;
+}
+/* Show the hamburger icon only on smaller screens */
+@media (max-width: 768px) {
+    #hamburger-icon {
+        display: block;
+    }
+}
+/* Styles for the hamburger icon */
+#hamburger-icon {
+    cursor: pointer;
+    font-size: 20px; /* Adjust the size as needed */
+    position: absolute;
+    top: 10px;
+    right: 20px; /* Adjust the right distance as needed */
+}
+/* Styles for the hamburger icon - initially hidden on larger screens */
+#hamburger-icon {
+    display: none; /* Hide the icon by default on larger screens */
+    cursor: pointer;
+    font-size: 20px; /* Adjust the size as needed */
+    position: absolute;
+    top: 10px;
+    right: 20px; /* Adjust the right distance as needed */
+}
+
+/* Show the hamburger icon only on screens with a width less than 768px */
+@media (max-width: 768px) {
+    #hamburger-icon {
+        display: block;
+    }
+}
+
+/* Styles for the navigation menu - initially visible on larger screens */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Show the menu on larger screens */
+@media (min-width: 769px) {
+    nav ul {
+        display: block; /* Display the menu on larger screens */
+    }
+
+    /* Hide the hamburger icon on larger screens */
+    #hamburger-icon {
+        display: none;
+    }
+}
+/* Styles for the navigation menu - initially visible on larger screens */
+nav {
+    background-color: #000; /* Set your desired background color here */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Add margin to separate the background from the ul */
+}
+
+/* Add more padding to the menu items on larger screens */
+nav ul li {
+    padding: 10px 20px; /* Adjust the padding as needed */
+}
+
+/* Show the menu on larger screens */
+@media (min-width: 769px) {
+    nav ul {
+        display: block; /* Display the menu on larger screens */
+    }
+
+    /* Hide the hamburger icon on larger screens */
+    #hamburger-icon {
+        display: none;
+    }
+}
+/* Styles for the header content */
+#header-content {
+    position: relative;
+}
+
+/* Styles for the hamburger icon */
+#hamburger-icon {
+    cursor: pointer;
+    font-size: 20px; /* Adjust the size as needed */
+    position: absolute;
+    top: 40px;
+    right: 20px; /* Adjust the right distance as needed */
+}
+/* Add pseudo-elements to the navigation menu items */
+nav ul li::before {
+    content: '➜'; /* You can change the content to any symbol or text you prefer */
+    margin-right: 5px; /* Adjust spacing between the content and menu item text */
+    color: #007bff; /* Adjust the color of the pseudo-element */
+}
+nav ul li.current-page a {
+    color: yellow;
 }

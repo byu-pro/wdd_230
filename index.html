@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="favicon.ico">
    
+    <!-- Add this button for the hamburger menu -->
+    <button id="hamburger-icon">&#8801;</button>
+
     <!-- Add Open Graph meta properties -->
     <meta property="og:title" content="[Your Page Title]">
     <meta property="og:type" content="website">
@@ -21,14 +24,17 @@
     <header>
         <img src="images/1677878005937.jpg" alt="[John obiko]">
         <h1>John obiko</h1>
+        <!-- Add the hamburger menu icon here -->
+        <button id="hamburger-icon">&#8801;</button>
     </header>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li class="current-page"><a href="#">Home</a></li>
             <li><a href="chamber/siteplan.html">Site Plan</a></li>
             <li><a href="chamber/">Chamber</a></li>
             <li><a href="https://www.byui.edu" target="_blank">BYU-Idaho</a></li>
             <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
+
         </ul>
     </nav>
     <main>
@@ -63,88 +69,35 @@
         <p id="lastModified">Last Modified: Tue, Sep 26</p>
     </footer>
 
-    <!-- Hamburger Menu -->
-    <div class="hamburger-menu">
-        <div class="hamburger-icon" id="hamburger-icon">&#8801;</div>
-        <ul class="main-menu" id="main-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="chamber/siteplan.html">Site Plan</a></li>
-            <li><a href="chamber/">Chamber</a></li>
-            <li><a href="https://www.byui.edu" target="_blank">BYU-Idaho</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
-        </ul>
-    </div>
-
-    <!-- CSS Styles for Hamburger Menu, Pseudo-Element, and Card Styles -->
-    <style>
-        /* Hamburger Menu Styles */
-        .hamburger-menu {
-            display: none;
-        }
-
-        .hamburger-icon {
-            cursor: pointer;
-        }
-
-        .main-menu {
-            list-style: none;
-            padding: 0;
-        }
-
-        .main-menu li {
-            margin: 10px 0;
-        }
-
-        /* Show the menu on smaller screens */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block;
-            }
-
-            .main-menu {
-                display: none;
-                background-color: #333;
-                padding: 10px;
-                position: absolute;
-                top: 50px;
-                right: 0;
-                width: 200px;
-            }
-
-            .main-menu.show-menu {
-                display: block;
-            }
-
-            /* Styles for 'X' symbol to close the menu */
-            #hamburger-icon.show-menu::after {
-                content: '✕';
-            }
-        }
-
-        /* Pseudo-element for wayfinding notation */
-        .main-menu li::before {
-            content: '➜';
-            margin-right: 5px;
-        }
-
-        /* Maintain aspect ratio for images */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Card Styles */
-        .card {
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-
-        /* Set the width of the map to 100% within the card */
-        .card iframe {
-            width: 100%;
-        }
     </style>
+    <script>
+        // Get references to the elements
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const navMenu = document.querySelector('nav ul');
+    
+        // Add a click event listener to the hamburger icon
+        hamburgerIcon.addEventListener('click', () => {
+            // Toggle the 'active' class on the hamburger icon
+            hamburgerIcon.classList.toggle('active');
+            
+            // Toggle the visibility of the navigation menu
+            navMenu.classList.toggle('active');
+        });
+    
+        // Function to hide the menu on larger screens
+        function hideMenuOnLargeScreen() {
+            if (window.innerWidth >= 768) {
+                hamburgerIcon.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        }
+    
+        // Hide the menu initially on larger screens
+        hideMenuOnLargeScreen();
+    
+        // Add a resize event listener to handle screen size changes
+        window.addEventListener('resize', hideMenuOnLargeScreen);
+    </script>
+    
 </body>
 </html>
