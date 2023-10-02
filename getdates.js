@@ -11,3 +11,4 @@ hamburgerIcon.addEventListener('click', () => {
     // For example, you can close the menu when a menu item is clicked
     // or perform other actions based on user interactions.
 });
+console.log('This is a debug message');
