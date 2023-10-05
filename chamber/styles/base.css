@@ -334,6 +334,37 @@ a:hover {
 
     /* Add hamburger menu styles here */
 }
+.mobile-menu {
+    display: none; /* Hide the mobile menu by default */
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block; /* Display the mobile menu on smaller screens */
+    }
+}
+/* CSS for hiding mobile menu by default */
+.mobile-menu {
+    display: none;
+}
+
+/* CSS for showing mobile menu on smaller screens */
+@media (max-width: 768px) {
+     
+
+    .mobile-menu {
+        display: block;
+    }
+}
+/* CSS to style the mobile menu when it's displayed */
+.menu-links {
+    display: none;
+}
+
+.menu-links.show-menu {
+    display: block;
+    /* Style for the expanded mobile menu */
+}
 
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
