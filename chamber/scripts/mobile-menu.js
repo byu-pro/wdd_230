@@ -36,3 +36,18 @@ const visitsData = '🔢 150';
 // Populate the weather and visits information
 weatherElement.textContent = `Weather: ${weatherData}`;
 visitsElement.textContent = `Visits: ${visitsData}`;
+// Example JavaScript to update weather and temperature icons
+const weatherIconElement = document.getElementById('weather-icon');
+const weatherCondition = 'rain'; // Replace with actual weather condition
+const temperatureElement = document.getElementById('temperature');
+const temperature = '25°C'; // Replace with actual temperature
+
+// Update weather icon based on conditions
+if (weatherCondition === 'rain') {
+    weatherIconElement.className = 'fas fa-cloud-rain'; // Replace with the appropriate class
+} else if (weatherCondition === 'sun') {
+    weatherIconElement.className = 'fas fa-sun'; // Replace with the appropriate class
+}
+
+// Update temperature
+temperatureElement.textContent = `Temperature: ${temperature}`;
