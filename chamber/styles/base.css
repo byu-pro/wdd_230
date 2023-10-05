@@ -365,6 +365,14 @@ a:hover {
     display: block;
     /* Style for the expanded mobile menu */
 }
+/* Color for the active page's link */
+.nav-links a.active {
+    color: #FFD700;
+}
+/* Color for navigation links on hover */
+.nav-links a:hover {
+    color: #FFD700;
+}
 
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
