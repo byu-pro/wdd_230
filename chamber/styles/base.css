@@ -5,12 +5,16 @@
 /* Use your color schema and wireframe as a guide */
 /* Note: This is a basic example; you should refine it according to your design */
 
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-1);
 }
-/* Apply Lora font to headings */
+
+/* Fonts */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lora', serif;
 }
@@ -20,7 +24,7 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Define your color variables */
+/* Color Variables */
 :root {
     --primary-color: #8ECAE6;
     --secondary-color: #219EBC;
@@ -29,20 +33,19 @@ p {
     --accent-3: #FB8500;
 }
 
-/* Apply white background and #023047 text color to the body element */
+/* Body Styles */
 body {
     background-color: white; /* Background color */
     color: var(--accent-1); /* Text color using your defined variable */
 }
 
-/* You can use these variables for other elements like buttons, links, etc. */
+/* Button Styles */
 .button {
     background-color: var(--accent-1); /* Button background color */
     color: white; /* Button text color */
 }
 
-/* Customize the styles with your color scheme */
-
+/* Header Styles */
 header {
     background-color: #023047;
     color: #fff;
@@ -50,6 +53,7 @@ header {
     text-align: center;
 }
 
+/* Navigation Styles */
 nav {
     display: flex;
     justify-content: space-between; /* Pushes logo to the left and links to the right */
@@ -59,10 +63,12 @@ nav {
     padding: 0 20px; /* Add padding for spacing */
 }
 
+/* Logo Styles */
 .logo img {
     height: 40px; /* Adjust the height of the logo section as needed */
 }
 
+/* Navigation Links Styles */
 .nav-links ul {
     list-style: none;
     padding: 0;
@@ -80,6 +86,8 @@ nav {
     font-weight: bold;
     font-size: 18px;
 }
+
+/* Footer Styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -92,13 +100,10 @@ nav ul li {
     display: inline;
     margin-right: 20px;
 }
+
 nav li {
     display: inline;
     margin-right: 20px;
-}
-/* Apply background color to navigation and footer */
-nav {
-    background-color: #023047; /* Background color */
 }
 
 footer {
@@ -117,55 +122,60 @@ nav a {
     font-weight: bold;
     font-size: 18px;
 }
-/* Adjust the dimensions of the hero image */
+
+/* Hero Image Styles */
 #hero-image {
     max-width: 100%; /* Ensure the image scales proportionally */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
     max-height: 300px; /* Set the maximum height to your desired value */
 }
-/* Set the minimum height of the content area to 100% of the viewport height */
+
+/* Body and HTML Styles */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* Apply a flex layout to the body to push the footer to the bottom */
+/* Flexbox Layout for Body */
 body {
     display: flex;
     flex-direction: column;
 }
 
-/* Style the main content area (adjust as needed) */
+/* Main Content Styles */
 main {
     flex-grow: 1; /* Allow the main content to grow and push the footer down */
 }
 
-/* Style the footer */
+/* Footer Styles */
 footer {
     background-color: #023047; /* Background color */
     color: white; /* Text color */
     padding: 20px;
 }
-/* Style the social media icons */
+
+/* Social Media Icons Styles */
 .social-icons img {
     width: 24px; /* Set the width of the icons */
     height: 24px; /* Set the height of the icons */
     margin-right: 10px; /* Add spacing between icons if needed */
 }
-/* Apply flexbox to the navigation container */
+
+/* Flexbox for Navigation Container */
 nav {
     display: flex;
     align-items: center; /* Vertically center the content */
 }
 
-/* Style the social media icons */
+/* Social Media Icons Styles */
 .social-icons img {
     width: 24px; /* Set the width of the icons */
     height: 24px; /* Set the height of the icons */
     margin-right: 10px; /* Add spacing between icons if needed */
 }
-/* Style the main content container */
+
+/* Main Content Container Styles */
 main {
     background-color: #fff; /* Set the background color to white */
     padding: 20px; /* Add padding to create space around content */
@@ -173,7 +183,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
 
-/* Style the hero image */
+/* Hero Section Styles */
 .hero {
     text-align: center; /* Center align content within the hero section */
 }
@@ -183,7 +193,7 @@ main {
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
 }
 
-/* Style the call-to-action section */
+/* Call-to-Action Section Styles */
 .cta {
     background-color: var(--accent-1); /* Use your accent color for the background */
     color: white; /* Set text color to white */
@@ -192,7 +202,7 @@ main {
     border-radius: 5px; /* Add rounded corners */
 }
 
-/* Style the current events section */
+/* Current Events Section Styles */
 .current-events {
     padding: 20px; /* Add padding to create space */
 }
@@ -211,7 +221,7 @@ main {
     margin-bottom: 10px; /* Add space between list items */
 }
 
-/* Style the weather card section */
+/* Weather Card Section Styles */
 .weather {
     padding: 20px; /* Add padding to create space */
 }
@@ -225,7 +235,7 @@ main {
     margin: 10px 0; /* Add space around paragraphs */
 }
 
-/* Style the company spotlights section */
+/* Company Spotlights Section Styles */
 .spotlights {
     padding: 20px; /* Add padding to create space */
 }
@@ -250,7 +260,8 @@ main {
 .spotlights p {
     margin-top: 10px; /* Add space above paragraph */
 }
-/* Style the footer container */
+
+/* Footer Container Styles */
 .footer {
     background-color: var(--accent-1);
     color: white;
@@ -258,7 +269,7 @@ main {
     text-align: center;
 }
 
-/* Style the footer content */
+/* Footer Content Styles */
 .footer-content {
     display: flex;
     justify-content: space-around;
@@ -268,27 +279,27 @@ main {
     margin: 0 auto;
 }
 
-/* Style the contact information section */
+/* Contact Information Section Styles */
 .contact-info {
     flex: 1;
     text-align: left;
     padding: 0 20px;
 }
 
-/* Style the development information section */
+/* Development Information Section Styles */
 .dev-info {
     flex: 1;
     text-align: left;
     padding: 0 20px;
 }
 
-/* Style the headings */
+/* Headings Styles */
 h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-/* Style the links */
+/* Links Styles */
 a {
     color: #fff;
     text-decoration: none;
@@ -298,7 +309,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Style the social media icons */
+/* Social Media Icons Styles */
 .social-icons {
     margin-top: 20px;
 }
@@ -310,51 +321,12 @@ a:hover {
     color: #fff;
 }
 
-/* Add hover effect to social media icons */
+/* Social Media Icons Hover Effect */
 .social-icons a:hover {
     color: var(--accent-2);
 }
-/* Style the navigation bar */
-nav {
-    background-color: #023047; /* Set the background color for the navigation bar */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space content evenly across the navigation bar */
-    align-items: center; /* Vertically center the content within the navigation bar */
-    padding: 10px 20px; /* Add padding for spacing */
-}
 
-/* Style the logo section */
-.logo img {
-    height: 40px; /* Adjust the height of the logo */
-}
-
-/* Style the navigation links */
-.nav-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Use flexbox for layout of navigation links */
-}
-
-.nav-links li {
-    margin-right: 30px; /* Add spacing between navigation links */
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white; /* Set text color for navigation links */
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Style the social media icons */
-.social-icons img {
-    width: 24px; /* Set the width of the social media icons */
-    height: 24px; /* Set the height of the social media icons */
-    margin-right: 10px; /* Add spacing between icons if needed */
-}
-
-/* Responsive styles for mobile view */
+/* Responsive Navigation Styles */
 @media (max-width: 768px) {
     .nav-links ul {
         display: none; /* Hide navigation links by default on smaller screens */
