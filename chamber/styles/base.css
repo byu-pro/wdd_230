@@ -314,6 +314,54 @@ a:hover {
 .social-icons a:hover {
     color: var(--accent-2);
 }
+/* Style the navigation bar */
+nav {
+    background-color: #023047; /* Set the background color for the navigation bar */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space content evenly across the navigation bar */
+    align-items: center; /* Vertically center the content within the navigation bar */
+    padding: 10px 20px; /* Add padding for spacing */
+}
+
+/* Style the logo section */
+.logo img {
+    height: 40px; /* Adjust the height of the logo */
+}
+
+/* Style the navigation links */
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for layout of navigation links */
+}
+
+.nav-links li {
+    margin-right: 30px; /* Add spacing between navigation links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* Set text color for navigation links */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Style the social media icons */
+.social-icons img {
+    width: 24px; /* Set the width of the social media icons */
+    height: 24px; /* Set the height of the social media icons */
+    margin-right: 10px; /* Add spacing between icons if needed */
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 768px) {
+    .nav-links ul {
+        display: none; /* Hide navigation links by default on smaller screens */
+    }
+
+    /* Add hamburger menu styles here */
+}
 
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
