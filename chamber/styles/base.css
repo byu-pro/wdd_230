@@ -6,14 +6,31 @@
 /* Note: This is a basic example; you should refine it according to your design */
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to paragraphs */
+    color: var(--accent-1); /* Text color using your defined variable */
 }
 
+/* Apply Lora font to headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+}
+
+/* Define your color variables */
+:root {
+    --primary-color: #8ECAE6;
+    --secondary-color: #219EBC;
+    --accent-1: #023047;
+    --accent-2: #FFB703;
+    --accent-3: #FB8500;
+}
+
+/* Customize the styles with your color scheme */
+
 header {
-    background-color: #333;
+    background-color: var(--accent-1);
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -23,7 +40,7 @@ nav {
     display: flex;
     justify-content: space-between; /* Pushes logo to the left and links to the right */
     align-items: center; /* Vertically centers the content */
-    background-color: #333;
+    background-color: var(--accent-1);
     height: 60px;
     padding: 0 20px; /* Add padding for spacing */
 }
@@ -49,35 +66,56 @@ nav {
     font-weight: bold;
     font-size: 18px;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #333;
-    height: 60px;
+
+/* Apply background color to navigation and footer */
+nav, footer {
+    background-color: var(--accent-1); /* Background color */
+    color: white; /* Text color */
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-nav li {
-    display: inline;
-    margin-right: 20px;
+/* Set text color to white for navigation and footer */
+nav a,
+footer p {
+    color: white; /* Text color */
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-}
 /* Adjust the dimensions of the hero image */
 #hero-image {
     max-width: 100%; /* Ensure the image scales proportionally */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
     max-height: 300px; /* Set the maximum height to your desired value */
 }
+
+/* Set the minimum height of the content area to 100% of the viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a flex layout to the body to push the footer to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the main content area (adjust as needed) */
+main {
+    flex-grow: 1; /* Allow the main content to grow and push the footer down */
+}
+
+/* Style the footer */
+footer {
+    padding: 20px;
+}
+
+/* Style the social media icons */
+.social-icons img {
+    width: 24px; /* Set the width of the icons */
+    height: 24px; /* Set the height of the icons */
+    margin-right: 10px; /* Add spacing between icons if needed */
+}
+
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
 
