@@ -348,7 +348,11 @@ nav {
     margin: 4px 0;
     transition: 0.4s;
 }
-
+.logo img {
+    height: 40px;
+    margin-top: 0px; /* Add a margin to move the logo down */
+    margin-bottom: 8px; /* Add a margin to move the logo up */
+}
 /* Add styles to animate the hamburger icon when clicked */
 
 /* Responsive Navigation Styles */
