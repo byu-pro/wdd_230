@@ -1,0 +1,59 @@
+/* A.) Use a normalize or reset CSS */
+/* You can include a CSS reset here if needed */
+
+/* B.) Provide baseline styling for your project */
+/* Use your color schema and wireframe as a guide */
+/* Note: This is a basic example; you should refine it according to your design */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* C.) Responsive Navigation Menu (Hamburger Menu) */
+/* Add your styles for responsive navigation here */
+
+/* D.) Mobile and Larger Views Layout Differences */
+/* Add styles to differentiate mobile and larger views */
+
+@media (max-width: 768px) {
+    /* Styles for mobile view */
+    nav ul {
+        display: none; /* Hide navigation links by default */
+    }
+
+    /* Add hamburger menu styles here */
+}
+
+@media (min-width: 769px) {
+    /* Styles for larger view */
+    nav ul {
+        display: block; /* Display navigation links horizontally */
+    }
+}
