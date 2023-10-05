@@ -399,6 +399,17 @@ nav {
 .menu-icon:hover {
     color: #FFB703;
 }
+/* Default style for larger screens */
+.doc-mod-info {
+    order: 2; /* Define the order of this section within the flex container */
+}
+
+/* Style for smaller screens (e.g., max-width: 768px) */
+@media (max-width: 768px) {
+    .doc-mod-info {
+        order: 3; /* Move this section below the others for smaller screens */
+    }
+}
 
 /* Responsive Navigation Styles */
 @media (max-width: 768px) {
