@@ -325,6 +325,15 @@ a:hover {
 .social-icons a:hover {
     color: var(--accent-2);
 }
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between; /* Pushes logo to the left and links to the right */
+    align-items: center; /* Vertically centers the content */
+    background-color: #023047;
+    height: 60px;
+    padding: 0 20px; /* Add padding for spacing */
+}
 
 /* Responsive Navigation Styles */
 @media (max-width: 768px) {
