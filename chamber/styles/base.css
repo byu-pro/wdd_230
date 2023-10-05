@@ -20,22 +20,63 @@ header {
 }
 
 nav {
+    display: flex;
+    justify-content: space-between; /* Pushes logo to the left and links to the right */
+    align-items: center; /* Vertically centers the content */
     background-color: #333;
-    color: #fff;
-    text-align: center;
+    height: 60px;
+    padding: 0 20px; /* Add padding for spacing */
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
+.logo img {
+    height: 40px; /* Adjust the height of the logo section as needed */
+}
+
+.nav-links ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    height: 60px;
 }
 
 nav ul li {
     display: inline;
     margin-right: 20px;
 }
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
 
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Adjust the dimensions of the hero image */
+#hero-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
 
