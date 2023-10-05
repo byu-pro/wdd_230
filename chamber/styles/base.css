@@ -334,6 +334,22 @@ nav {
     height: 60px;
     padding: 0 20px; /* Add padding for spacing */
 }
+/* Hamburger Icon Styles */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #000; /* Adjust color as needed */
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Add styles to animate the hamburger icon when clicked */
 
 /* Responsive Navigation Styles */
 @media (max-width: 768px) {
