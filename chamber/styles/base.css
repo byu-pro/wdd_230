@@ -74,8 +74,9 @@ nav a {
 }
 /* Adjust the dimensions of the hero image */
 #hero-image {
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image scales proportionally */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    max-height: 300px; /* Set the maximum height to your desired value */
 }
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
