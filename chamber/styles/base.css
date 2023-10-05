@@ -354,6 +354,51 @@ nav {
     margin-bottom: 8px; /* Add a margin to move the logo up */
 }
 /* Add styles to animate the hamburger icon when clicked */
+/* Default style for the menu icon (white) */
+
+/* Style for the menu icon with !important */
+.menu-icon {
+    color: white !important;
+}
+
+/* Style for the menu icon when hovered with !important */
+.menu-icon:hover {
+    color: #FFB703 !important;
+}
+/* CSS to style the mobile menu links when it's displayed */
+.menu-links {
+    display: none;
+    flex-direction: column; /* Display links in a column format */
+    align-items: center; /* Center align links horizontally */
+    background-color: #023047; /* Background color for the menu */
+    position: absolute;
+    top: 60px; /* Adjust this value to position the menu below the header */
+    left: 0;
+    width: 100%;
+}
+
+/* Style for individual menu items */
+.menu-links li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Show the menu links when the menu icon is clicked */
+.menu-links.show-menu {
+    display: flex;
+}
+/* Style for the menu icon (white) */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    color: white; /* Add this line to set the color to white */
+}
+
+/* Style for the menu icon when hovered (yellow) */
+.menu-icon:hover {
+    color: #FFB703;
+}
 
 /* Responsive Navigation Styles */
 @media (max-width: 768px) {
