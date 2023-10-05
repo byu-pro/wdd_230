@@ -9,13 +9,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to paragraphs */
-    color: var(--accent-1); /* Text color using your defined variable */
 }
-
 /* Apply Lora font to headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lora', serif;
+}
+
+/* Apply Montserrat font to paragraphs */
+p {
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Define your color variables */
@@ -27,10 +29,22 @@ h1, h2, h3, h4, h5, h6 {
     --accent-3: #FB8500;
 }
 
+/* Apply white background and #023047 text color to the body element */
+body {
+    background-color: white; /* Background color */
+    color: var(--accent-1); /* Text color using your defined variable */
+}
+
+/* You can use these variables for other elements like buttons, links, etc. */
+.button {
+    background-color: var(--accent-1); /* Button background color */
+    color: white; /* Button text color */
+}
+
 /* Customize the styles with your color scheme */
 
 header {
-    background-color: var(--accent-1);
+    background-color: #023047;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -40,7 +54,7 @@ nav {
     display: flex;
     justify-content: space-between; /* Pushes logo to the left and links to the right */
     align-items: center; /* Vertically centers the content */
-    background-color: var(--accent-1);
+    background-color: #023047;
     height: 60px;
     padding: 0 20px; /* Add padding for spacing */
 }
@@ -66,11 +80,29 @@ nav {
     font-weight: bold;
     font-size: 18px;
 }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #023047;
+    height: 60px;
+}
 
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
 /* Apply background color to navigation and footer */
-nav, footer {
-    background-color: var(--accent-1); /* Background color */
-    color: white; /* Text color */
+nav {
+    background-color: #023047; /* Background color */
+}
+
+footer {
+    background-color: #023047; /* Background color */
 }
 
 /* Set text color to white for navigation and footer */
@@ -79,13 +111,18 @@ footer p {
     color: white; /* Text color */
 }
 
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
 /* Adjust the dimensions of the hero image */
 #hero-image {
     max-width: 100%; /* Ensure the image scales proportionally */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
     max-height: 300px; /* Set the maximum height to your desired value */
 }
-
 /* Set the minimum height of the content area to 100% of the viewport height */
 html, body {
     height: 100%;
@@ -106,7 +143,20 @@ main {
 
 /* Style the footer */
 footer {
+    background-color: #023047; /* Background color */
+    color: white; /* Text color */
     padding: 20px;
+}
+/* Style the social media icons */
+.social-icons img {
+    width: 24px; /* Set the width of the icons */
+    height: 24px; /* Set the height of the icons */
+    margin-right: 10px; /* Add spacing between icons if needed */
+}
+/* Apply flexbox to the navigation container */
+nav {
+    display: flex;
+    align-items: center; /* Vertically center the content */
 }
 
 /* Style the social media icons */
@@ -114,6 +164,155 @@ footer {
     width: 24px; /* Set the width of the icons */
     height: 24px; /* Set the height of the icons */
     margin-right: 10px; /* Add spacing between icons if needed */
+}
+/* Style the main content container */
+main {
+    background-color: #fff; /* Set the background color to white */
+    padding: 20px; /* Add padding to create space around content */
+    border-radius: 10px; /* Add rounded corners to the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+/* Style the hero image */
+.hero {
+    text-align: center; /* Center align content within the hero section */
+}
+
+.hero img {
+    max-width: 100%; /* Ensure the image scales proportionally */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+/* Style the call-to-action section */
+.cta {
+    background-color: var(--accent-1); /* Use your accent color for the background */
+    color: white; /* Set text color to white */
+    text-align: center; /* Center align content */
+    padding: 20px; /* Add padding to create space */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* Style the current events section */
+.current-events {
+    padding: 20px; /* Add padding to create space */
+}
+
+.current-events h2 {
+    font-size: 24px; /* Increase heading font size */
+    color: var(--accent-1); /* Use your accent color for headings */
+}
+
+.current-events ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0; /* Remove list padding */
+}
+
+.current-events li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+/* Style the weather card section */
+.weather {
+    padding: 20px; /* Add padding to create space */
+}
+
+.weather h2 {
+    font-size: 24px; /* Increase heading font size */
+    color: var(--accent-1); /* Use your accent color for headings */
+}
+
+.weather p {
+    margin: 10px 0; /* Add space around paragraphs */
+}
+
+/* Style the company spotlights section */
+.spotlights {
+    padding: 20px; /* Add padding to create space */
+}
+
+.spotlights h2 {
+    font-size: 24px; /* Increase heading font size */
+    color: var(--accent-1); /* Use your accent color for headings */
+}
+
+.spotlights .spotlight {
+    margin-bottom: 20px; /* Add space between spotlight items */
+    padding: 10px; /* Add padding to spotlight items */
+    border: 1px solid #ccc; /* Add a border to spotlight items */
+    border-radius: 5px; /* Add rounded corners to spotlight items */
+}
+
+.spotlights img {
+    max-width: 100%; /* Ensure images scale proportionally */
+    height: auto; /* Automatically adjust image height */
+}
+
+.spotlights p {
+    margin-top: 10px; /* Add space above paragraph */
+}
+/* Style the footer container */
+.footer {
+    background-color: var(--accent-1);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Style the footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style the contact information section */
+.contact-info {
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Style the development information section */
+.dev-info {
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Style the headings */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style the links */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style the social media icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Add hover effect to social media icons */
+.social-icons a:hover {
+    color: var(--accent-2);
 }
 
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
