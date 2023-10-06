@@ -1,21 +1,19 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a & */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:ital,wght@0,300;0,400;1,300&display=swap');
 
 :root {
-  /* change the values below to your colors from your palette */
+  /* Colors from your palette */
   --primary-color: #8ECAE6;
   --secondary-color: #219EBC;
   --accent1-color: #023047;
   --accent2-color: #FFB703;
   --accent3-color: #FB8500;
 
-  /* change the values below to your chosen font(s) */
-  --heading-font: "Lora";
-  --paragraph-font: Montserrat, Helvetica, sans-serif;
+  /* Fonts */
+  --heading-font: 'Lora', serif;
+  --paragraph-font: 'Montserrat', Helvetica, sans-serif;
 
-  /* these colors below should be chosen from among your palette colors above */
+  /* Colors for text on backgrounds */
   --headline-color-on-white: #396E94; /* headlines on a white background */
   --headline-color-on-color: white; /* headlines on a colored background */
   --paragraph-color-on-white: #396E94; /* paragraph text on a white background */
@@ -27,10 +25,7 @@ Fonts are separated by a & */
   --nav-hover-background-color: #396E94;
 }
 
-
-
-/*  Look around below...but DON'T CHANGE ANYTHING! */
-
+/* Global Styles */
 body {
   max-width: 960px;
   margin: 0 auto;
@@ -114,27 +109,28 @@ p.colored {
   color: var(--paragraph-color-on-color);
 }
 
+/* Navigation Styles */
 nav {
-    background-color: var(--nav-background-color);
-    line-height: 3em;
-    text-align: center; /* Center-align the text */
-    font-size: 1.2em;
-}
-
-nav  {
-  list-style-type: none;
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
 }
 
 nav a {
-    padding: 1em;
-    min-width: 120px;
-    text-decoration: none;
-    padding: 10px;
-    display: inline-block; /* Add this property to center-align each navigation link */
+  padding: 1em;
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
 }
 
-nav a:link, nav a:visited {
+nav a:link,
+nav a:visited {
   color: var(--nav-link-color);
 }
 
@@ -143,16 +139,13 @@ nav a:hover {
   background-color: var(--nav-hover-background-color);
 }
 
+/* Sitemap Styles (if used) */
 .sitemap {
   display: grid;
   justify-content: center;
-
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+  grid-template-areas: ". . home home . ." ". . . top . ." ". left left right right ." "page2 page2 . . page3 page3";
 }
 
 .sitemap > div {
@@ -193,24 +186,3 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
-nav {
-    background-color: var(--nav-background-color);
-    line-height: 3em;
-    text-align: center; /* Add this line to center-align the text */
-    font-size: 1.2em;
-  }
-h3 {
-    font-family: var(--heading-font);
-    color: var(--headline-color-on-white);
-    text-align: center; /* Add this line to center-align the text */
-    font-size: 1.2em;
-}
-nav {
-    background-color: var(--nav-background-color);
-    display: flex; /* Add this line to use Flexbox */
-    justify-content: center; /* Center-align the items horizontally */
-    align-items: center; /* Center-align the items vertically */
-    height: 3em; /* Set a specific height for the navigation bar */
-    font-size: 1.2em;
-  }
-  
