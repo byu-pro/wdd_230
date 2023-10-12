@@ -1,33 +1,45 @@
 // JavaScript for the Book of Mormon - Top 10 Application
 
-function addChapter() {
-    // Get the input element and the value
-    const chapterInput = document.getElementById('favchap');
-    const chapterValue = chapterInput.value;
+// Declare const variables that hold references to the input, button, and list elements
+const input = document.querySelector('#favchap');
+const button = document.querySelector('button');
+const list = document.querySelector('#list');
 
-    if (chapterValue.trim() === '') {
-        alert('Please enter a valid chapter name.');
-        return;
+// Create a click event listener for the Add Chapter button
+button.addEventListener('click', () => {
+    // Check if the input is not blank
+    if (input.value.trim() !== '') {
+        // Create a new list item
+        const li = document.createElement('li');
+
+        // Create a delete button
+        const deleteButton = document.createElement('button');
+
+        // Populate the li element's textContent with the input value
+        li.textContent = input.value;
+
+        // Populate the delete button textContent with ❌
+        deleteButton.textContent = '❌';
+
+        // Append the delete button to the li element
+        li.append(deleteButton);
+
+        // Append the li element to the unordered list in your HTML
+        list.append(li);
+
+        // Add an event listener to the delete button that removes the li element when clicked
+        deleteButton.addEventListener('click', function () {
+            list.removeChild(li);
+            input.focus();
+        });
+
+        // Send the focus to the input element
+        input.focus();
+
+        // Clear the input value
+        input.value = '';
+    } else {
+        // Provide a message or at least do nothing and return focus to the input field
+        input.focus();
     }
-
-    // Create a new list item and add the chapter name
-    const chapterList = document.getElementById('list');
-    const listItem = document.createElement('li');
-    listItem.textContent = chapterValue;
-
-    // Add a delete button to the list item
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.classList.add('delete');
-    deleteButton.onclick = function () {
-        chapterList.removeChild(listItem);
-    };
-
-    listItem.appendChild(deleteButton);
-
-    // Add the list item to the chapter list
-    chapterList.appendChild(listItem);
-
-    // Clear the input field
-    chapterInput.value = '';
-}
+});
