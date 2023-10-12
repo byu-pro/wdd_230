@@ -188,10 +188,10 @@
             <p>WDD 230</p>
         </section>
 
-        <!-- Document Modification Information (Move this section here) -->
+        <!-- Document Modification Information -->
         <section class="doc-mod-info">
-            <h2>Last Modified</h2>
-            <p><span id="lastModified"></span></p>
+        <h2>Last Modified</h2>
+        <p id="lastModified">Last modified: <span id="lastModifiedDate"></span></p>
             
             <!-- Social Media Icons -->
             <div class="social-icons">
@@ -211,25 +211,20 @@
 
 
     <!-- JavaScript for Last Modified Date -->
-    <script src="scripts/mobile-menu.js"></script>
-    <!-- JavaScript for Back to Top Button -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var backButton = document.querySelector(".back-to-top");
+        // Get the last modified date of the document
+        var lastModified = new Date(document.lastModified);
 
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 300) {
-                backButton.style.display = "block";
-            } else {
-                backButton.style.display = "none";
-            }
-        });
+        // Format the date to a user-friendly format
+        var options = { year: 'numeric', month: 'long', day: 'numeric' };
+        var formattedDate = lastModified.toLocaleDateString(undefined, options);
 
-        backButton.addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+        // Display the formatted date
+        document.getElementById("lastModifiedDate").textContent = formattedDate;
     });
 </script>
+
 
 
 </body>
