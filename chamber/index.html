@@ -29,6 +29,8 @@
     <!-- Header -->
     <header>
         <!-- Your header content goes here -->
+        
+        
     </header>
 
     <!-- Navigation -->
@@ -71,6 +73,7 @@
 
 
     <!-- Main Content -->
+    
     <main>
         <!-- Hero Image -->
 <section class="hero">
@@ -122,6 +125,35 @@
                 <p>Company 3 - Description</p>
             </div>
         </section>
+        <!-- Existing content above this line -->
+
+<!-- Back to Top button -->
+<div class="back-to-top">
+    <a href="#top">Back to Top</a>
+</div>
+
+<!-- JavaScript for scrolling -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.back-to-top').fadeIn();
+            } else {
+                $('.back-to-top').fadeOut();
+            }
+        });
+        $('.back-to-top a').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
+
     </main>
 
    <!-- Footer -->
@@ -167,6 +199,25 @@
 
     <!-- JavaScript for Last Modified Date -->
     <script src="scripts/mobile-menu.js"></script>
+    <!-- JavaScript for Back to Top Button -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var backButton = document.querySelector(".back-to-top");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                backButton.style.display = "block";
+            } else {
+                backButton.style.display = "none";
+            }
+        });
+
+        backButton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+</script>
+
 
 </body>
 </html>

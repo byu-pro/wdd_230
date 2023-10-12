@@ -192,6 +192,23 @@ main {
     max-width: 100%; /* Ensure the image scales proportionally */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
 }
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    color: #fff;
+}
 
 /* Call-to-Action Section Styles */
 .cta {
@@ -200,6 +217,26 @@ main {
     text-align: center; /* Center align content */
     padding: 20px; /* Add padding to create space */
     border-radius: 5px; /* Add rounded corners */
+}
+/* Style for the "Back to Top" button */
+#back-to-top-button {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #007bff; /* Blue background color */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 50%; /* Makes it a circle */
+    padding: 15px; /* Adjust padding as needed to make the circle larger or smaller */
+    font-size: 24px; /* Adjust the font size as needed */
+    cursor: pointer;
+    z-index: 99; /* Ensure it's above other page content */
+}
+
+/* Style for the hover effect (change color on hover) */
+#back-to-top-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Current Events Section Styles */

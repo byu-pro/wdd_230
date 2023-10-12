@@ -51,3 +51,4 @@ if (weatherCondition === 'rain') {
 
 // Update temperature
 temperatureElement.textContent = `Temperature: ${temperature}`;
+
