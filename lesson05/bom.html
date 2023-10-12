@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book of Mormon Favorite Chapters</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>📖 Book of Mormon - Top 10</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-    <h1>My Favorite Book of Mormon Chapters</h1>
-    <div class="entry-form">
-        <input type="text" id="chapter-input" placeholder="Enter your favorite chapter">
-        <button onclick="addChapter()">Add Chapter</button>
-    </div>
-    <ul id="chapter-list"></ul>
-    <script src="js/app.js"></script>
+    <h1>📖 Book of Mormon - Top 10</h1>
+    <main>
+        <label for="favchap">Enter Book and Chapter: </label>
+        <input type="text" id="favchap" placeholder="Alma 5" value="Alma 5">
+        <button type="submit" onclick="addChapter()">Add Chapter</button>
+        <ul id="list"></ul>
+    </main>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
