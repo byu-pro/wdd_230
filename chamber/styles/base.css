@@ -496,22 +496,6 @@ nav {
 .toggle-checkbox:checked + .toggle-label::after {
     left: 20px;
 }
-/* Document Modification Information Styles for Desktop */
-.doc-mod-info {
-    text-align: left; /* Horizontally align to the left on desktop */
-}
-
-#lastModified {
-    margin: 0; /* Remove default margin to have it flush to the left on desktop */
-}
-
-/* Media query for Mobile */
-@media (max-width: 768px) {
-    /* Document Modification Information Styles for Mobile */
-    .doc-mod-info {
-        text-align: center; /* Horizontally center align on mobile */
-    }
-}
 
 @media (max-width: 768px) {
     .mobile-menu {
