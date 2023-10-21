@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- Link to your JavaScript file -->
+    <script src="scripts/windchill.js"></script>
 
     <style>
         /* Add additional CSS styles here */
@@ -78,11 +80,22 @@
     <!-- Main Content -->
     
     <main>
-        <!-- Hero Image -->
+       <!-- Hero Image -->
 <section class="hero">
-    <!-- Set the width and height attributes for the image -->
-    <img src="images/placeholder hero image-01.jpg" alt="Komarock Chamber of Commerce" width="1400" height="500">
+    <!-- Small Viewport Image -->
+    <img
+        srcset="images/wdd230-org-small.jpg 320w,
+                images/wdd230-org-medium.jpg 768w,
+                images/wdd230-org-large.jpg 1400w"
+        sizes="(max-width: 320px) 280px,
+               (max-width: 768px) 680px,
+               1400px"
+        src="images/wdd230-org-large.jpg"
+        alt="Komarock Chamber of Commerce">
+    <!-- Text Overlays -->
+    <div class="text-overlay">Large</div>
 </section>
+
         <!-- Call-to-Action -->
         <section class="cta">
             <!-- Placeholder call-to-action link -->
@@ -103,13 +116,19 @@
         <!-- Weather Card -->
 <section class="weather">
     <!-- Weather icon -->
-    <i id="weather-icon" class="fas fa-sun"></i> <!-- Placeholder icon, replace with actual weather icon class -->
+    <i id="weather-icon" class="fas fa-sun"></i>
     <h2>Weather</h2>
     <p>Current Weather: Sunny</p>
     <!-- Temperature icon -->
-    <i class="fas fa-thermometer-half"></i> <!-- Thermometer icon -->
-    <p>Temperature: 25°C</p>
-        </section>
+    <i class="fas fa-thermometer-half"></i>
+    <p id="temperature">Temperature: 25°F</p> <!-- Update with actual temperature value -->
+    <!-- Wind Speed -->
+    <i class="fas fa-wind"></i>
+    <p id="wind-speed">Wind Speed: 5.0 mph</p> <!-- Update with actual wind speed value -->
+    <!-- Wind Chill Value -->
+    <p id="wind-chill">Wind Chill: Calculating...</p>
+</section>
+
 
         <!-- Company Spotlights -->
         <section class="spotlights">

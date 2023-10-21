@@ -496,6 +496,9 @@ nav {
 .toggle-checkbox:checked + .toggle-label::after {
     left: 20px;
 }
+@media (max-width: 768px) {
+    /* Add styles for smaller screens here */
+}
 
 @media (max-width: 768px) {
     .mobile-menu {
