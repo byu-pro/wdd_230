@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+    <title>Responsive Images</title>
+</head>
+<body>
+    <h1>Welcome to Responsive Images</h1>
+    <p>This is a basic HTML structure for responsive images.</p>
+    <img src="images/durbantemple.jpg" alt="Responsive Image">
+    <main>
+        <div class="hero">
+            <picture>
+                <!-- Source element for the smallest image (max-width: 500px) -->
+                <source srcset="" media="(max-width: 500px)">
+                
+                <!-- Source element for the medium image (max-width: 1000px) -->
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                
+                <!-- Img element referencing the largest image with alt, width, and height attributes -->
+                <img src="images/hero-large.webp" alt="Table Setting" width="1500" height="750">
+            </picture>
+        </div>
+    </main>
+</body>
+</html>
