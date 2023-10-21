@@ -159,6 +159,7 @@ nav ul li.current-page a {
 .hero-card {
     width: 600px;
     height: 400px;
+    position: relative;
 }
 
 /* Styles for the image and overlay label */
@@ -176,4 +177,5 @@ nav ul li.current-page a {
     color: #fff; /* Text color for the overlay */
     padding: 10px; /* Adjust padding as needed */
     text-align: center; /* Center-align text */
+    
 }
