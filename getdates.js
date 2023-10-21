@@ -12,3 +12,6 @@ hamburgerIcon.addEventListener('click', () => {
     // or perform other actions based on user interactions.
 });
 console.log('This is a debug message');
+
+
+

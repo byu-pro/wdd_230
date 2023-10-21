@@ -179,3 +179,21 @@ nav ul li.current-page a {
     text-align: center; /* Center-align text */
     
 }
+/* Back to Top Button Styles */
+.back-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-to-top-button:hover {
+    background-color: #0056b3;
+}

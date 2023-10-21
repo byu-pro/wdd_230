@@ -80,6 +80,31 @@
         <p id="lastModified">Last Modified: Tue, Sep 26</p>
     </footer>
 
+     <!-- "Back to Top" Button -->
+     <button id="back-to-top-button" class="back-to-top-button">Back to Top</button>
+
+     <!-- JavaScript for the hamburger menu and "Back to Top" button -->
+     <script src="getdates.js"></script>
+     <script>
+         // JavaScript for the hamburger menu (existing code)
+ 
+         // JavaScript for the "Back to Top" button (new code)
+         const backToTopButton = document.getElementById('back-to-top-button');
+ 
+         window.addEventListener('scroll', () => {
+             if (window.pageYOffset > 100) {
+                 backToTopButton.style.display = 'block';
+             } else {
+                 backToTopButton.style.display = 'none';
+             }
+         });
+ 
+         backToTopButton.addEventListener('click', () => {
+             document.body.scrollTop = 0; // For Safari
+             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+         });
+     </script>
+
     <!-- JavaScript for the hamburger menu -->
     <script src="getdates.js"></script>
     <script>
@@ -110,7 +135,7 @@
         // Add a resize event listener to handle screen size changes
         window.addEventListener('resize', hideMenuOnLargeScreen);
     </script>
-    <script src="getdates.js"></script>
+   
 
 </body>
 </html>
