@@ -621,7 +621,15 @@ nav {
     display: flex !important;
   }
   
+  .hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
+
+
+  
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
 
