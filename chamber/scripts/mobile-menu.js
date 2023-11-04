@@ -2,9 +2,11 @@
 const menuIcon = document.querySelector(".menu-icon");
 const menuLinks = document.querySelector(".menu-links");
 
+// Add a click event listener to the menuIcon to toggle the class "show-menu" on menuLinks
 menuIcon.addEventListener("click", () => {
     menuLinks.classList.toggle("show-menu");
 });
+
 // Get a reference to the <ul> element for learning activities
 const learningActivitiesList = document.getElementById('learningActivities');
 
@@ -16,7 +18,7 @@ const learningActivities = [
   { text: 'CSS Pseudo-Classes W04 code pen', url: 'https://codepen.io/byu-pro/pen/dywQMKj' }
 ];
 
-// Populate the learning activities list
+// Populate the learning activities list by iterating over the learningActivities array
 learningActivities.forEach(activity => {
   const listItem = document.createElement('li');
   const link = document.createElement('a');
@@ -25,6 +27,7 @@ learningActivities.forEach(activity => {
   listItem.appendChild(link);
   learningActivitiesList.appendChild(listItem);
 });
+
 // Get references to the elements for weather and visits
 const weatherElement = document.getElementById('weather');
 const visitsElement = document.getElementById('visits');
@@ -36,6 +39,7 @@ const visitsData = '🔢 150';
 // Populate the weather and visits information
 weatherElement.textContent = `Weather: ${weatherData}`;
 visitsElement.textContent = `Visits: ${visitsData}`;
+
 // Example JavaScript to update weather and temperature icons
 const weatherIconElement = document.getElementById('weather-icon');
 const weatherCondition = 'rain'; // Replace with actual weather condition
@@ -52,11 +56,11 @@ if (weatherCondition === 'rain') {
 // Update temperature
 temperatureElement.textContent = `Temperature: ${temperature}`;
 
+// Add another click event listener to menuIcon (not needed unless there's specific functionality to add)
 menuIcon.addEventListener("click", () => {
   console.log("Clicked!"); 
   menuLinks.classList.toggle("show-menu");
 });
-
 
 menuIcon.addEventListener("click", () => {
   console.log("clicked!");
