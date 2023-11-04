@@ -38,13 +38,16 @@
     <main>
         <!-- Hero Image Card Section -->
         <section class="card">
+
             <h3>Favorite Temple: Durban South Africa Temple</h3>
+          
             <picture>
-                <source srcset="images/durbantemple-small.webp" media="(max-width: 400px)">
-                <source srcset="images/durbantemple-medium.webp" media="(max-width: 960px)">
-                <img src="images/durbantemple- lrg.webp" alt="Favorite Temple" srcset="images/durbantemple-small.webp 400w, images/durbantemple-medium.webp 960w, images/durbantemple-large.webp 1400w" sizes="(max-width: 400px) 100vw, (max-width: 960px) 50vw, 1400px" width="760" height="500">
+              <source media="(max-width: 600px)" srcset="images/durbantemple-small.webp">
+              <source media="(max-width: 1200px)" srcset="images/durbantemple-medium.webp">
+              <img class="img-fluid" src="images/durbantemple-large.webp" alt="Favorite Temple">
             </picture>
-        </section>
+          
+          </section>
 
         <h2>WDD 230: Web Frontend Development</h2>
         <section class="card">
@@ -80,7 +83,7 @@
         </p>
         <p id="lastModified">Last Modified: Tue, Sep 26</p>
     </footer>
-
+    <button id="backToTop">&uarr; Back to Top</button>
     
     <!-- JavaScript for the hamburger menu and "Back to Top" button -->
     <script src="getdates.js"></script>

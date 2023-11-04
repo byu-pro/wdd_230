@@ -21,3 +21,21 @@ window.addEventListener('resize', hideMenuOnLargeScreen);
 hamburgerIcon.addEventListener('click', () => {
     document.body.classList.toggle('active'); 
   });
+
+// Get button 
+const btn = document.getElementById("backToTop");
+
+// When user scrolls down 20px from top show button
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+// Scroll to top on click
+btn.addEventListener("click", function() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});

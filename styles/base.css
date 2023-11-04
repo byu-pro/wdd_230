@@ -53,13 +53,19 @@ main {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.card img {
+    object-fit: cover;
+  }
 .card {
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+.card img {
+    max-width: 100%;
+    height: auto;
+  }
 
 footer {
     background-color: #002e5d;
@@ -67,7 +73,21 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
+#backToTop {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  
+    /* Light blue colors */
+    background-color: #add8e6;
+    border-color: #add8e6;
+    color: #333; 
+  }
+  
+  #backToTop:hover {
+    background-color: #90c7e3; 
+  }
 /* Hamburger Icon Styles */
 .hamburger-icon {
     cursor: pointer;
@@ -124,13 +144,6 @@ footer {
     text-decoration: none;
     color: white;
     font-weight: bold;
-}
-
-/* Pseudo-elements for New Navigation Menu Items */
-.new-nav ul li::before {
-    content: '➜';
-    margin-right: 5px;
-    color: #007bff;
 }
 
 /* Current Page Style */
