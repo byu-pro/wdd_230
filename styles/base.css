@@ -10,9 +10,6 @@ header {
     text-align: center;
     padding: 20px;
     background-color: #002e5d;
-}
-
-header h1 {
     color: white;
 }
 
@@ -22,16 +19,21 @@ header img {
     border-radius: 50%;
 }
 
-nav ul {
-    list-style-type: none;
-    background-color: #000000;
-    padding: 10px 0;
+nav {
+    background-color: #000;
+    color: white;
     text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline-block;
-    margin-right: 20px !important;
+    margin-right: 20px;
 }
 
 nav ul li:last-child {
@@ -40,8 +42,8 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
     font-weight: bold;
+    color: white;
 }
 
 main {
@@ -50,28 +52,6 @@ main {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero-image-container {
-    position: relative;
-    max-width: 800px; /* Adjust to your content width */
-    margin: 0 auto;  /* Center the image container */
-}
-
-.picture {
-    width: 100%;
-    height: auto; /* To maintain the image's aspect ratio */
-}
-
-.overlay-label {
-    position: absolute;
-    top: 50%; /* Position it vertically centered */
-    left: 50%; /* Position it horizontally centered */
-    transform: translate(-50%, -50%); /* Center the overlay */
-    background: rgba(0, 0, 0, 0.7); /* Background color for the overlay */
-    color: #fff; /* Text color for the overlay */
-    padding: 10px; /* Adjust padding as needed */
-    text-align: center; /* Center-align text */
 }
 
 .card {
@@ -89,7 +69,7 @@ footer {
 }
 
 /* Hamburger Icon Styles */
-#hamburger-icon {
+.hamburger-icon {
     cursor: pointer;
     font-size: 20px;
     position: absolute;
@@ -99,105 +79,39 @@ footer {
 }
 
 @media (max-width: 768px) {
-    #hamburger-icon {
+    .hamburger-icon {
         display: block; /* Show the icon on smaller screens */
     }
 }
 
-/* Navigation Menu Styles */
-nav {
+.hamburger-icon .bar {
+    width: 25px;
+    height: 3px;
     background-color: #000;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.hamburger-icon.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-nav ul li {
-    padding: 10px 20px;
+.hamburger-icon.active .bar:nth-child(2) {
+    opacity: 0;
 }
 
-@media (min-width: 769px) {
-    nav ul {
-        display: block;
-    }
-
-    #hamburger-icon {
-        display: none;
-    }
-}
-
-/* Pseudo-elements for Navigation Menu Items */
-nav ul li::before {
-    content: '➜';
-    margin-right: 5px;
-    color: #007bff;
-}
-
-/* Current Page Style */
-nav ul li.current-page a {
-    color: yellow;
-}
-
-/* Additional styles for the hero image card and overlay label */
-.hero-card {
-    max-width: 800px; /* Adjust to your content width */
-    margin: 0 auto;  /* Center the card */
-    position: relative;
-    overflow: hidden; /* Ensure the image doesn't overflow the card */
-}
-
-.hero-card {
-    width: 600px;
-    height: 400px;
-    position: relative;
-}
-
-/* Styles for the image and overlay label */
-.picture {
-    width: 100%;
-    height: auto; /* To maintain the image's aspect ratio */
-}
-
-.overlay-label {
-    position: absolute;
-    top: 50%; /* Position it vertically centered */
-    left: 50%; /* Position it horizontally centered */
-    transform: translate(-50%, -50%); /* Center the overlay */
-    background: rgba(0, 0, 0, 0.7); /* Background color for the overlay */
-    color: #fff; /* Text color for the overlay */
-    padding: 10px; /* Adjust padding as needed */
-    text-align: center; /* Center-align text */
-}
-
-/* Back to Top Button Styles */
-.back-to-top-button {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.back-to-top-button:hover {
-    background-color: #0056b3;
+.hamburger-icon.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* New Navigation Menu Styles */
 .new-nav {
-    background-color: #000; /* Background color for the new navigation bar */
+    background-color: #000;
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
+    display: none; /* Hide the new navigation bar by default */
 }
 
 .new-nav li {
@@ -211,22 +125,19 @@ nav ul li.current-page a {
     font-weight: bold;
 }
 
-/* New Navigation Menu Styles for Mobile */
-@media (max-width: 768px) {
-    .new-nav {
-        display: block; /* Show the new navigation bar on smaller screens */
-    }
-}
-
 /* Pseudo-elements for New Navigation Menu Items */
-.new-nav li::before {
+.new-nav ul li::before {
     content: '➜';
     margin-right: 5px;
     color: #007bff;
 }
 
 /* Current Page Style */
-.new-nav li.current-page a {
+.new-nav ul li.current-page a {
     color: yellow;
 }
 
+/* Show the new navigation menu when the hamburger icon is active */
+.hamburger-icon.active + .new-nav {
+    display: block;
+}
