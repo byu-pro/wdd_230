@@ -52,3 +52,15 @@ if (weatherCondition === 'rain') {
 // Update temperature
 temperatureElement.textContent = `Temperature: ${temperature}`;
 
+// In mobile-menu.js
+
+menuIcon.addEventListener("click", () => {
+  menuLinks.classList.toggle("show-menu");
+});
+menuIcon.addEventListener("click", () => {
+  menuLinks.classList.toggle("show-menu");
+});
+menuIcon.addEventListener("click", () => {
+  console.log("click"); // test if click works
+  menuLinks.classList.toggle("show-menu"); 
+});

@@ -479,7 +479,11 @@ nav {
     position: relative;
     cursor: pointer;
 }
+/* In base.css */
 
+.nav-links a.active {
+    color: #FFD700; 
+  }
 .toggle-label::after {
     content: "";
     position: absolute;
@@ -492,7 +496,46 @@ nav {
     left: 4px;
     transition: 0.2s;
 }
+/* In base.css */  
+/* In base.css */
 
+.menu-links.show-menu {
+    display: flex;
+  }
+.nav-links a:hover {
+    color: #FFD700;
+  }
+/* In base.css */
+/* In base.css */
+
+@media (max-width: 768px) {
+
+    .doc-mod-info {
+      order: 3; 
+    }
+.hero img {
+    max-height: 400px; /* or whatever height you want */
+    }
+  }
+  .hero img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .menu-links {
+    display: none; 
+  }
+  .menu-links.show-menu {
+    display: flex;
+  }
+
+.menu-icon {
+    color: white;
+  }
+  
+  .menu-icon:hover {
+    color: #FFB703; 
+  }
 .toggle-checkbox:checked + .toggle-label::after {
     left: 20px;
 }
