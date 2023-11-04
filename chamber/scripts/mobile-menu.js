@@ -2,67 +2,56 @@
 const menuIcon = document.querySelector(".menu-icon");
 const menuLinks = document.querySelector(".menu-links");
 
-// Add a click event listener to the menuIcon to toggle the class "show-menu" on menuLinks
 menuIcon.addEventListener("click", () => {
     menuLinks.classList.toggle("show-menu");
 });
 
-// Get a reference to the <ul> element for learning activities
-const learningActivitiesList = document.getElementById('learningActivities');
-
-// Define an array of learning activity links and their corresponding URLs
-const learningActivities = [
-  { text: 'CSS Pseudo-elements', url: 'https://codepen.io/byu-pro/pen/mdaLrJo' },
-  { text: 'Link to W3Schools Combinator Exercise Screenshot', url: 'https://drive.google.com/file/d/1O65JeqW0WAEdwEau996QuovHaj-yvufw/view?usp=sharing' },
-  { text: 'Link to Responsive "Hamburger" Menu Exercise', url: 'https://codepen.io/byu-pro/pen/wvRjzEW' },
-  { text: 'CSS Pseudo-Classes W04 code pen', url: 'https://codepen.io/byu-pro/pen/dywQMKj' }
-];
-
-// Populate the learning activities list by iterating over the learningActivities array
-learningActivities.forEach(activity => {
-  const listItem = document.createElement('li');
-  const link = document.createElement('a');
-  link.textContent = activity.text;
-  link.href = activity.url;
-  listItem.appendChild(link);
-  learningActivitiesList.appendChild(listItem);
-});
-
-// Get references to the elements for weather and visits
-const weatherElement = document.getElementById('weather');
-const visitsElement = document.getElementById('visits');
-
-// Simulate dynamic data (you can replace this with real data)
-const weatherData = '☀️ 25°C';
-const visitsData = '🔢 150';
-
-// Populate the weather and visits information
-weatherElement.textContent = `Weather: ${weatherData}`;
-visitsElement.textContent = `Visits: ${visitsData}`;
-
-// Example JavaScript to update weather and temperature icons
-const weatherIconElement = document.getElementById('weather-icon');
-const weatherCondition = 'rain'; // Replace with actual weather condition
+// Get a reference to the element with ID 'temperature' for 'textContent'
 const temperatureElement = document.getElementById('temperature');
-const temperature = '25°C'; // Replace with actual temperature
 
-// Update weather icon based on conditions
-if (weatherCondition === 'rain') {
-    weatherIconElement.className = 'fas fa-cloud-rain'; // Replace with the appropriate class
-} else if (weatherCondition === 'sun') {
-    weatherIconElement.className = 'fas fa-sun'; // Replace with the appropriate class
+if (temperatureElement) {
+    // Check if the element exists before accessing its 'textContent'
+    temperatureElement.textContent = `Temperature: 25°F`; // Update with actual temperature value
+} else {
+    console.error("Element with 'temperature' not found.");
 }
 
-// Update temperature
-temperatureElement.textContent = `Temperature: ${temperature}`;
+// Get a reference to the element with ID 'menuElementId' for 'appendChild'
+const menuElement = document.getElementById('menuElementId');
 
-// Add another click event listener to menuIcon (not needed unless there's specific functionality to add)
-menuIcon.addEventListener("click", () => {
-  console.log("Clicked!"); 
-  menuLinks.classList.toggle("show-menu");
+if (menuElement) {
+    // Check if the element exists before manipulating it
+    // Your code logic here
+} else {
+    console.error("Element with 'menuElementId' not found.");
+}
+
+// JavaScript for scrolling
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn();
+        } else {
+            $('.back-to-top').fadeOut();
+        }
+    });
+    $('.back-to-top a').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
 });
 
-menuIcon.addEventListener("click", () => {
-  console.log("clicked!");
-  //...
+// JavaScript for Last Modified Date
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the last modified date of the document
+    var lastModified = new Date(document.lastModified);
+
+    // Format the date to a user-friendly format
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    var formattedDate = lastModified.toLocaleDateString(undefined, options);
+
+    // Display the formatted date
+    document.getElementById("lastModifiedDate").textContent = formattedDate;
 });
