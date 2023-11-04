@@ -626,10 +626,51 @@ nav {
     height: auto;
     object-fit: cover;
   }
-
-
-
+/* Default mobile menu link style */
+.menu-links a {
+    color: #ffffff; 
+  }
   
+  /* Style when link is clicked */
+  .menu-links a:active {
+    background-color: #eee;
+  }
+  .menu-links a {
+    transition: background-color 0.2s;
+  }
+  .menu-links a:active {
+    background-color: #023047; 
+  }
+  .menu-links a {
+    padding: 10px 20px;
+  }
+  .menu-links a:active {
+    background-color: #023047;
+    transition: background-color 0.2s; 
+  }
+/* Mobile Menu Link Styles */
+
+.menu-links a {
+    padding: 30px 20px;
+    border-radius: 4px;
+    transition: background-color 0.2s, padding 0.2s;
+  }
+  
+  .menu-links a:active {
+    background-color: #023047;
+    padding: 5px 10px; 
+  }
+
+
+
+
+
+
+
+
+
+
+
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
 
