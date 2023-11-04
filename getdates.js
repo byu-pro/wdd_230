@@ -17,3 +17,7 @@ function hideMenuOnLargeScreen() {
 hideMenuOnLargeScreen();
 
 window.addEventListener('resize', hideMenuOnLargeScreen);
+// Add this hamburger click event listener
+hamburgerIcon.addEventListener('click', () => {
+    document.body.classList.toggle('active'); 
+  });
