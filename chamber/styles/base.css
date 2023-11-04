@@ -588,6 +588,40 @@ nav {
     color: #FFD700;
 }
 
+.menu-links {
+    display: none; 
+  }
+
+.menu-links.show-menu {
+    display: flex;
+  }
+/* Styles for mobile menu */
+.menu-links {
+    flex-direction: column;
+    align-items: center;
+    /* etc...*/
+  }
+  .menu-icon {
+    color: white; 
+  }
+  
+  .menu-icon:hover {
+    color: #FFB703;  
+  }
+  @media (max-width: 768px) {
+    .doc-mod-info {
+      order: 3;
+    }
+  }
+  .menu-links.show-menu {
+    display: flex !important;
+  }
+
+  .menu-links.show-menu {
+    display: flex !important;
+  }
+  
+
 /* C.) Responsive Navigation Menu (Hamburger Menu) */
 /* Add your styles for responsive navigation here */
 
