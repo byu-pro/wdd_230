@@ -56,4 +56,16 @@ window.onload = function() {
   if (lastModified) {
       lastModified.textContent = 'Last Modified: ' + document.lastModified;
   }
+
+  // JavaScript for the page visits counter
+  var count = localStorage.getItem('pageVisitCount');
+  if (!count) {
+      count = 0;
+  }
+  count++;
+  localStorage.setItem('pageVisitCount', count);
+  var counterElement = document.querySelector('#visitCounter');
+  if (counterElement) {
+      counterElement.textContent = 'Page Visits: ' + count;
+  }
 };
