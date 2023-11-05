@@ -1,0 +1,36 @@
+/* Layout */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Form */
+form {
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, 
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Membership Info */
+.membership-info {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.membership-info h2 {
+  margin-top: 0; 
+}

@@ -11,40 +11,38 @@
     <meta property="og:image" content="your_image_url_here">
     <meta property="og:url" content="your_website_url_here">
 
-    <title>Komarock Chamber of Commerce</title>
-
-    <!-- CSS Links -->
+    <title>Join - Komarock Chamber of Commerce</title>
+  
+    <!-- Existing CSS files -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/join.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+ 
+     <!-- Link to your JavaScript file -->
+     <script src="scripts/discover.js"></script>
+     <script src="scripts/mobile-menu.js"></script>
 
-    <!-- Link to your JavaScript file -->
-    <script src="scripts/windchill.js"></script>
-    <script src="scripts/mobile-menu.js"></script>
+ 
+     <style>
+         /* Add additional CSS styles here */
+         /* For example, make the website responsive with media queries */
+         /* Define styles for different screen sizes */
+         @media (max-width: 768px) {
+             /* Add styles for smaller screens here */
+         }
+     </style>
 
-
-    <style>
-        /* Add additional CSS styles here */
-        /* For example, make the website responsive with media queries */
-        /* Define styles for different screen sizes */
-        @media (max-width: 768px) {
-            /* Add styles for smaller screens here */
-        }
-    </style>
+ 
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <!-- Your header content goes here -->
-        
-        
-    </header>
 
-    
-    <!-- Navigation -->
-<nav>
+<body>
+
+  <!-- Header and Navigation -->
+  <header></header>
+
+  <nav>
     
     <div class="logo">
         <!-- Your logo or logo section goes here -->
@@ -52,10 +50,10 @@
     </div>
     <div class="nav-links">
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="/chamber/discover.html">Discover</a></li>
             <li><a href="/chamber/directory.html">Directory</a></li>
-            <li><a href="/chamber/join.html">Join</a></li>
+            <li><a href="/chamber/join.html"class="active">Join</a></li>
             <!-- Social media icons -->
             <li class="social-icons">
                 <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
@@ -84,111 +82,94 @@
     
 </nav>
 
+  <main>
 
-    <!-- Main Content -->
+    <form method="get" action="thankyou.html">
     
-    <main>
-      <!-- Hero Image -->
-      <section class="hero">
-
-        <img src="images/largeheroimage-01.jpg">
-
-        <img srcset="wdd230-org-small.webp 500w,
-                     wdd230-org-medium.webp 800w,
-                     wdd230-org-large.webp 1200w">
+      <label for="first-name">
+        First Name: 
+        <input type="text" id="first-name" name="first-name" required>
+      </label>
       
-      </section>
-    <!-- Text Overlays -->
-    <div class="text-overlay"></div>
-</section>
+      <label for="last-name">  
+        Last Name:
+        <input type="text" id="last-name" name="last-name" required>
+      </label>
 
-        <!-- Call-to-Action -->
-        <section class="cta">
-            <!-- Placeholder call-to-action link -->
-            <a href="#">Join the Komarock Chamber of Commerce</a>
-        </section>
+      <label for="title">
+        Title:
+        <input type="text" id="title" name="title" required pattern="[A-Za-z-\s]{7,}">
+      </label>
 
-        <!-- Current Events -->
-        <section class="current-events">
-            <!-- Placeholder current events content -->
-            <h2>Current Events</h2>
-            <ul>
-                <li>Event 1 - Date</li>
-                <li>Event 2 - Date</li>
-                <li>Event 3 - Date</li>
-            </ul>
-        </section>
+      <label for="email">
+        Email: 
+        <input type="email" id="email" name="email" required placeholder="yourname@email.com">
+      </label>
 
-        <!-- Weather Card -->
-<section class="weather">
-    <!-- Weather icon -->
-    <i id="weather-icon" class="fas fa-sun"></i>
-    <h2>Weather</h2>
-    <p>Current Weather: Sunny</p>
-    <!-- Temperature icon -->
-    <i class="fas fa-thermometer-half"></i>
-    <p id="temperature">Temperature: 25°F</p> <!-- Update with actual temperature value -->
-    <!-- Wind Speed -->
-    <i class="fas fa-wind"></i>
-    <p id="wind-speed">Wind Speed: 5.0 mph</p> <!-- Update with actual wind speed value -->
-    <!-- Wind Chill Value -->
-    <p id="wind-chill">Wind Chill: Calculating...</p>
-</section>
+      <label for="phone">  
+        Phone Number:
+        <input type="tel" id="phone" name="phone" required>
+      </label>
 
+      <label for="organization">
+        Organization Name:
+        <input type="text" id="organization" name="organization" required>  
+      </label>
 
-        <!-- Company Spotlights -->
-        <section class="spotlights">
-            <!-- Placeholder spotlight advertisements -->
-            <h2>Company Spotlights</h2>
-            <div class="spotlight">
-                <img src="images/company image A.jpg" alt="Company 1">
-                <p>Company 1 - Description</p>
-            </div>
-            <div class="spotlight">
-                <img src="images/company image B.jpg" alt="Company 2">
-                <p>Company 2 - Description</p>
-            </div>
-            <div class="spotlight">
-                <img src="images/company image C.jpg" alt="Company 3">
-                <p>Company 3 - Description</p>
-            </div>
-        </section>
-        <!-- Existing content above this line -->
+      <label for="membership-level">
+        Membership Level:
+        <select id="membership-level" name="membership-level">
+          <option value="np">NP Membership (Free)</option>  
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
 
-        
-        
+      <label for="description">
+        Organization Description:
+        <textarea id="description" name="description"></textarea>
+      </label>
 
-<!-- Back to Top button -->
-<div class="back-to-top">
-    <a href="#top">Back to Top</a>
-</div>
+      <input type="hidden" id="timestamp" name="timestamp" value="">
+      
+      <button type="submit">Submit Application</button>
 
+    </form>
 
-<!-- JavaScript for scrolling -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                $('.back-to-top').fadeIn();
-            } else {
-                $('.back-to-top').fadeOut();
-            }
-        });
-        $('.back-to-top a').click(function () {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 800);
-            return false;
-        });
-    });
-</script>
-</body>
-</html>
+    <section class="membership-info">
 
-    </main>
+      <h2>Membership Levels and Benefits</h2>
 
-   <!-- Footer -->
+      <p><strong>NP Membership</strong> - Free (for non-profits)</p>
+
+      <p><strong>Bronze Membership</strong> - $100/year</p>
+      <ul>
+        <li>Benefit 1</li>
+        <li>Benefit 2</li>
+      </ul>
+
+      <p><strong>Silver Membership</strong> - $150/year</p>
+      <ul>
+        <li>Benefit 1</li>
+        <li>Benefit 2</li>
+        <li>Benefit 3</li>
+      </ul>
+
+      <p><strong>Gold Membership</strong> - $500/year</p>
+      <ul>
+        <li>Benefit 1</li>
+        <li>Benefit 2</li>
+        <li>Benefit 3</li>
+        <li>Benefit 4</li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
         <!-- Contact Information -->
@@ -245,6 +226,15 @@
 </script>
 
 
+
+</body>
+</html>
+
+
+  <script>
+    // Set timestamp on page load
+    document.getElementById("timestamp").value = new Date(); 
+  </script>
 
 </body>
 </html>
