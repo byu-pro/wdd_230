@@ -66,6 +66,10 @@ main {
     max-width: 100%;
     height: auto;
   }
+  img {
+    width: 100%;  /* or any custom width */
+    height: auto;
+}
 
 footer {
     background-color: #002e5d;
