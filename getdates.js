@@ -68,4 +68,34 @@ window.onload = function() {
   if (counterElement) {
       counterElement.textContent = 'Page Visits: ' + count;
   }
+
+  // JavaScript for fetching location and weather data
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+
+        // Fetch location data from OpenCageData
+        fetch('https://api.opencagedata.com/geocode/v1/json?q=' + lat + '+' + lon + '8aed07189e2b4b2f900faac0d8568b93')
+            .then(response => response.json())
+            .then(data => {
+                var locationElement = document.querySelector('#location');
+                if (locationElement) {
+                    locationElement.textContent = 'Location: ' + data.results[0].components.city + ', ' + data.results[0].components.country;
+                }
+            });
+
+        // Fetch weather data from OpenWeatherMap
+        fetch('https://api.opencagedata.com/geocode/v1/json?' + lat + '&lon=' + lon + '&appid=YOUR_OPENWEATHERMAP_API_KEY')
+            .then(response => response.json())
+            .then(data => {
+                var weatherElement = document.querySelector('#weather');
+                if (weatherElement) {
+                    weatherElement.textContent = 'Weather: ' + data.weather[0].description;
+                }
+            });
+    });
+  } else {
+    console.log('Geolocation is not supported by this browser.');
+  }
 };

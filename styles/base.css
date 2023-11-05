@@ -70,6 +70,13 @@ main {
     width: 100%;  /* or any custom width */
     height: auto;
 }
+#weather {
+  font-size: 24px;
+}
+
+#weather .fas {
+  color: #ffdd00;  /* Color of the sun icon */
+}
 
 footer {
     background-color: #002e5d;
