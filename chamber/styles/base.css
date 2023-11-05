@@ -708,6 +708,56 @@ nav {
     align-items: center;
   }
   
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-column1,
+  .footer-column2,
+  .footer-column3 {
+    flex: 1; 
+  }
+  .site-map {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .site-map li {
+    margin: 10px 0;
+  }
+  @media (max-width: 600px) {
+  
+    .footer-content {
+      flex-wrap: wrap;
+    }
+  
+    .footer-column1,
+    .footer-column2,
+    .footer-column3 {
+      flex-basis: 100%;
+    }
+  
+  }  
+@media (max-width: 600px) {
+  .footer-content {
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    flex-basis: 100%;
+  }
+}
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+    }
+    
+    .footer-section {
+      margin: 10px 0;
+    }
+  }  
   /* Hide nav links on small screens */
   @media (max-width: 768px) {
     .nav-links {
