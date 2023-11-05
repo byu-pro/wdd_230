@@ -59,3 +59,7 @@ const menu = document.querySelector('.mobile-menu-links');
 if (menu.classList.contains('show-menu')) {
   // toggle code
 }
+// Toggle show-menu class on click
+document.querySelector('.menu-icon').addEventListener('click', () => {
+    document.querySelector('.menu-links').classList.toggle('show-menu');
+  })
