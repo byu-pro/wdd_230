@@ -665,7 +665,7 @@ nav {
   /* Make non-active links white */ 
   .mobile-menu .mobile-menu-links a {
     background-color: white;
-    color: rgb(255, 255, 255);
+    color: black;
   }
 
   .menu-icon {
