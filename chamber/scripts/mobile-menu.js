@@ -55,3 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Display the formatted date
     document.getElementById("lastModifiedDate").textContent = formattedDate;
 });
+const menu = document.querySelector('.mobile-menu-links');
+if (menu.classList.contains('show-menu')) {
+  // toggle code
+}
