@@ -39,3 +39,13 @@ btn.addEventListener("click", function() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
+// JavaScript
+window.onload = function() {
+  var navLinks = document.querySelectorAll('nav a');
+  var currentPage = window.location.href;
+  navLinks.forEach(function(link) {
+      if (link.href === currentPage) {
+          link.classList.add('active');
+      }
+  });
+};

@@ -157,7 +157,11 @@ footer {
     /* existing styles */
     display: block;
   }
-  
+/* CSS */
+nav a.active {
+  color: #fffb00; /* Change this to the color you want */
+}
+
   @media (min-width: 768px) {
     .hamburger-icon {
       display: none;
