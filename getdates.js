@@ -49,3 +49,9 @@ window.onload = function() {
       }
   });
 };
+window.onload = function() {
+  var lastModified = document.querySelector('#lastModified');
+  if (lastModified) {
+      lastModified.textContent = 'Last Modified: ' + document.lastModified;
+  }
+};
