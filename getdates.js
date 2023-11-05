@@ -17,10 +17,11 @@ function hideMenuOnLargeScreen() {
 hideMenuOnLargeScreen();
 
 window.addEventListener('resize', hideMenuOnLargeScreen);
+
 // Add this hamburger click event listener
 hamburgerIcon.addEventListener('click', () => {
     document.body.classList.toggle('active'); 
-  });
+});
 
 // Get button 
 const btn = document.getElementById("backToTop");
@@ -39,7 +40,8 @@ btn.addEventListener("click", function() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
-// JavaScript
+
+// JavaScript for changing the nav link color
 window.onload = function() {
   var navLinks = document.querySelectorAll('nav a');
   var currentPage = window.location.href;
@@ -48,8 +50,8 @@ window.onload = function() {
           link.classList.add('active');
       }
   });
-};
-window.onload = function() {
+
+  // JavaScript for updating the last modified date
   var lastModified = document.querySelector('#lastModified');
   if (lastModified) {
       lastModified.textContent = 'Last Modified: ' + document.lastModified;
