@@ -1,0 +1,36 @@
+/* Apply styles for alignment, proximity, readability, and accessibility */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, output {
+    margin: 5px 0;
+}
+
+/* Define CSS variables for common property settings */
+:root {
+    --form-background: #f4f4f4;
+    --form-text-color: #333;
+    --form-border-color: #ccc;
+}
+
+body {
+    background-color: var(--form-background);
+    color: var(--form-text-color);
+}
+
+form {
+    background-color: var(--form-background);
+    color: var(--form-text-color);
+    border: 1px solid var(--form-border-color);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/form.css">
+    <script>
+        function checkPassword(input) {
+            if (input.value !== document.getElementById('password').value) {
+                input.setCustomValidity('Passwords must match.');
+            } else {
+                input.setCustomValidity('');
+            }
+        }
+    </script>
+    
+    <title>Form Page</title>
+</head>
+<body>
+    <!-- Include course home page header, navigation, and footer here -->
+
+    <main>
+        <form action="record.html" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required pattern="^[a-zA-Z0-9]{8,}$">
+
+            <label for="password-confirm">Confirm Password:</label>
+            <input type="password" id="password-confirm" name="password-confirm" required oninput="checkPassword(this)">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
+
+            <label for="page-rating">Page Rating:</label>
+            <input type="range" id="page-rating" name="page-rating" min="1" max="10" step="1">
+            <output for="page-rating"></output>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>
